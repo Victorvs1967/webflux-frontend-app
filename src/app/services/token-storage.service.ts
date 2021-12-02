@@ -10,11 +10,11 @@ export class TokenStorageService {
   constructor() { }
 
   saveToken(token: string): any {
-    window.localStorage.removeItem(TOKEN_KEY);
-    window.localStorage.setItem(TOKEN_KEY, token);
+    window.sessionStorage.removeItem(TOKEN_KEY);
+    window.sessionStorage.setItem(TOKEN_KEY, token);
   }
 
   getToken(): string | null {
-    return window.localStorage.getItem(TOKEN_KEY);
+    return window.sessionStorage.getItem(TOKEN_KEY);
   }
 }
